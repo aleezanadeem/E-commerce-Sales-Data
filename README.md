@@ -1,4 +1,4 @@
-````markdown
+
 # SQL E-commerce Analytics — Data Cleaning & Business Insights
 
 **Business goal:** Turn messy e-commerce CSVs into a clean analytics model and produce **recruiter-ready insights**: top customers (LTV), revenue by category/region/season, payment mix, and new vs repeat.
@@ -18,7 +18,6 @@ Everything runs locally via **Dockerized PostgreSQL** and plain SQL. Charts are 
 - **Grain:** `core.fact_sales` = **purchase line** (customer × product × timestamp).  
 - **Timezone:** Europe/London.
 
----
 
 ## Methods (What’s implemented)
 - **Cleaning:** typed IDs; normalized gender/payment; parsed timestamps; robust **price extraction** from noisy text (takes the **first valid** `$1,234.56`-like token).  
@@ -29,7 +28,6 @@ Everything runs locally via **Dockerized PostgreSQL** and plain SQL. Charts are 
 - **KPIs / Views:** `core.v_kpi_headline`, `core.v_top_customers_ltv`, `core.v_sales_by_category`, `core.v_sales_by_region`, `core.v_seasonality_monthly`, `core.v_payment_mix`, `core.v_order_new_repeat`  
 - **Data Quality:** `core.v_dq_summary` (counts, uniqueness, referential integrity, domain/temporal checks).
 
----
 
 ## How to Run (Complete, copy-paste)
 
@@ -38,7 +36,7 @@ Everything runs locally via **Dockerized PostgreSQL** and plain SQL. Charts are 
 1) **Create local env (no secrets committed)**
 ```bash
 cp .env.example .env        # open .env and set POSTGRES_PASSWORD
-````
+
 
 2. **Start Postgres (from repo root)**
 
